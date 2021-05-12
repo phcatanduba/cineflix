@@ -48,3 +48,12 @@ ul {
 .movie img {
     height: 193px;
 }
+
+.date {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100px;
+    width: 100%;
+    margin-left: 23px;
+}
