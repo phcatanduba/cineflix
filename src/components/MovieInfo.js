@@ -4,8 +4,10 @@ export default function MovieInfo({ movie, date }) {
             <div className="movie">
                 <img src={movie.posterURL} />
             </div>
-            <p>{movie.title}</p>
-            <p>{date}</p>
+            <div>
+                <p>{movie.title}</p>
+                <p>{date}</p>
+            </div>
         </footer>
     );
 }

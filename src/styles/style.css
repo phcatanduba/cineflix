@@ -27,6 +27,7 @@ header {
     justify-content: center;
     color: #293845;
     margin-top: 67px;
+    margin-bottom: 20px;
 }
 
 ul {
@@ -69,6 +70,7 @@ li.movie img {
     background: #e8833a;
     font-size: 18px;
     border: none;
+    margin-bottom: 117px;
 }
 
 footer {
@@ -95,6 +97,7 @@ div.movie img {
 }
 
 li.seat {
+    margin: 3px;
     font-size: 11px;
     display: flex;
     flex-wrap: wrap;
@@ -102,7 +105,82 @@ li.seat {
     justify-content: center;
     width: 26px;
     height: 26px;
-    border-radius: 12px;
+    border-radius: 26px;
     background: #c3cfd9;
     border: 1px solid #808f9d;
+}
+
+li.selected {
+    background-color: #8dd7cf;
+}
+
+li.not-avaliable {
+    background-color: #fbe192;
+}
+
+.example ul {
+    margin-top: 20px;
+    justify-content: space-evenly;
+}
+
+.seats div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.shopper-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 41px;
+}
+
+label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 2px;
+}
+
+div.name {
+    margin-bottom: 7px;
+}
+
+.shopper-info input {
+    text-align: center;
+    font-size: 18px;
+    width: 327px;
+    height: 51px;
+}
+
+.shopper-info input::placeholder {
+    font-style: italic;
+    font-size: 18px;
+}
+
+.reserve {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 117px;
+    margin-bottom: 117px;
+}
+
+.reserve button {
+    width: 225px;
+    height: 42px;
+    color: white;
+    background: #e8833a;
+    font-size: 18px;
+    text-align: center;
+    border: none;
+}
+
+@media (max-width: 340px) {
+    li.seat {
+        width: 20px;
+        height: 20px;
+    }
 }
