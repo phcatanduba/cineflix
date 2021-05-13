@@ -13,6 +13,9 @@ header {
     color: #e8833a;
     background: #c3cfd9;
     font-size: 34px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
 }
 
 .instruction {
@@ -23,6 +26,7 @@ header {
     align-items: center;
     justify-content: center;
     color: #293845;
+    margin-top: 67px;
 }
 
 ul {
@@ -45,7 +49,7 @@ ul {
     margin-right: 10px;
 }
 
-.movie img {
+li.movie img {
     height: 193px;
 }
 
@@ -54,6 +58,51 @@ ul {
     flex-direction: column;
     justify-content: space-around;
     height: 100px;
-    width: 100%;
     margin-left: 23px;
+}
+
+.time-button {
+    margin-right: 10px;
+    width: 82px;
+    height: 43px;
+    color: white;
+    background: #e8833a;
+    font-size: 18px;
+    border: none;
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    height: 117px;
+    background: #dfe6ed;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    align-items: center;
+    font-size: 26px;
+}
+
+div.movie {
+    margin-left: 10px;
+    margin-right: 14px;
+    width: 64px;
+    height: 89px;
+}
+
+div.movie img {
+    width: 55px;
+}
+
+li.seat {
+    font-size: 11px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 12px;
+    background: #c3cfd9;
+    border: 1px solid #808f9d;
 }

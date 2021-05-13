@@ -20,11 +20,11 @@ export default function Movies() {
             <ul>
                 {movies.map((movie) => {
                     return (
-                        <Link to={`/sessoes/${movie.id}`} key={movie.id}>
-                            <li className="movie">
+                        <li className="movie" key={movie.id}>
+                            <Link to={`/sessoes/${movie.id}`}>
                                 <img src={movie.posterURL} />
-                            </li>
-                        </Link>
+                            </Link>
+                        </li>
                     );
                 })}
             </ul>
