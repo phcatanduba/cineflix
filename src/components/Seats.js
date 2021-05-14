@@ -8,7 +8,8 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 
-export default function Seats() {
+let date;
+export default function Seats(props) {
     const { idSessao } = useParams();
     const [weekday, setWeekday] = useState('');
     const [time, setTime] = useState('');
@@ -23,6 +24,7 @@ export default function Seats() {
             `https://mock-api.bootcamp.respondeai.com.br/api/v2/cineflex/showtimes/${idSessao}/seats`
         );
         promise.then((response) => {
+            date = response.data.day.date;
             setWeekday(response.data.day.weekday);
             setTime(response.data.name);
             setMovie(response.data.movie);
@@ -55,7 +57,6 @@ export default function Seats() {
     }
 
     /*------------------------------------------------------*/
-
     return (
         <main>
             <Header />
@@ -94,7 +95,15 @@ export default function Seats() {
                 setName={setName}
                 setCpf={setCpf}
             />
-            <Reserve name={name} cpf={cpf} />
+            <Reserve
+                reserveIt={props.reserveIt}
+                name={name}
+                title={movie.title}
+                cpf={cpf}
+                seats={rowsSeats}
+                date={date}
+                time={time}
+            />
             <MovieInfo movie={movie} date={weekday + ' - ' + time} />
         </main>
     );
